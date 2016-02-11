@@ -1,11 +1,20 @@
-var path = require("path");
+var path = require('path');
+var webpack = require('webpack')
+
 module.exports = {
-	entry: './components/app.jsx',
+	entry: [
+		'webpack-dev-server/client?http://localhost:8080',
+		'webpack/hot/only-dev-server',
+		'./components/app.jsx'
+	],
 	output: {
-		path: path.resolve(__dirname, "build"),
-		publicPath: "/",
-		filename: "bundle.js"
+		path: path.resolve(__dirname, 'build'),
+		publicPath: '/',
+		filename: 'bundle.js'
 	},
+	plugins: [
+		new webpack.HotModuleReplacementPlugin(),
+	],
 	module: {
 		loaders: [
 			{
