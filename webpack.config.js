@@ -3,9 +3,9 @@ var webpack = require('webpack')
 
 module.exports = {
 	entry: [
-		'webpack-dev-server/client?http://localhost:8080',
+		'webpack-dev-server/client?http://localhost:3000',
 		'webpack/hot/only-dev-server',
-		'./components/app.jsx'
+		'./src/index'
 	],
 	output: {
 		path: path.resolve(__dirname, 'build'),
@@ -19,11 +19,12 @@ module.exports = {
 		loaders: [
 			{
 				test: /\.jsx?$/,
-				exclude: /(node_modules|bower_components)/,
-				loader: 'babel',
-				query: {
+				/*exclude: /(node_modules|bower_components)/,*/
+				loaders: ['react-hot', 'babel'],
+				include: path.join(__dirname, 'src')
+				/*query: {
 					presets: ['react', 'es2015']
-				}
+				}*/
 			}
 		]
 	},
