@@ -1,22 +1,19 @@
-import React, {Component} from 'react'
-// import { render } from 'react-dom'
-import { Provider } from 'react-redux'
-import store from '../store'
-import Todos from './todos'
+import React, {Component} from 'react';
+import { Provider } from 'react-redux';
+import store from '../store';
 
-// let reactElement = document.getElementById('react')
-// render(
-// 	<Provider store={store}>
-// 		<Todos />
-// 	</Provider>,
-// 	reactElement
-// )
+import Todos from './todos';
+import DevTools from './devTools';
+
 
 export default class App extends Component {
 	render() {
 		return (
 			<Provider store={store}>
-				<Todos />
+				<div>
+					<Todos />
+					<DevTools />
+				</div>
 			</Provider>
 		);
 	}

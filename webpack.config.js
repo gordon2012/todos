@@ -19,12 +19,11 @@ module.exports = {
 		loaders: [
 			{
 				test: /\.jsx?$/,
-				/*exclude: /(node_modules|bower_components)/,*/
-				loaders: ['react-hot', 'babel'],
+				loaders: [
+					'react-hot',
+					'babel?cacheDirectory,presets[]=react,presets[]=es2015'
+				],
 				include: path.join(__dirname, 'src')
-				/*query: {
-					presets: ['react', 'es2015']
-				}*/
 			}
 		]
 	},
