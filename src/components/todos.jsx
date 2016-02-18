@@ -13,7 +13,16 @@ const Todos = ({ todos, dispatch }) => (
 						e.target.value = ''
 					}
 			}} />
-			{todos.map(todo => <p key={todo}>{todo}</p>)}
+			<ul>
+				{todos.notes.map(todo => {
+					return (
+						<li key={todo.id}>
+							<h4>{todo.id}</h4>
+							<p>{todo.task}</p>
+						</li>
+					)
+				})}
+			</ul>
 		</div>
 )
 
