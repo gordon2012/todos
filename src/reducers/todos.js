@@ -1,6 +1,6 @@
 import uuid from 'node-uuid';
 
-export default (state, action) => {
+export default (state={notes: [{id: uuid.v4(), task: 'Code A Lot More!'}]}, action) => {
 	switch(action.type) {
 		case 'addTodo':
 			// return state.push(action.todo)
@@ -11,3 +11,6 @@ export default (state, action) => {
 			return state
 	}
 }
+
+
+//
