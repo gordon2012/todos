@@ -5,7 +5,7 @@ import DevTools from './components/devTools';
 import uuid from 'node-uuid';
 
 
- export default createStore(todos, undefined, DevTools.instrument());
+export default createStore(todos, undefined, DevTools.instrument());
 	// {
 	//    notes: [
 	// 		{ id: uuid.v4(), task: 'Code More!' },

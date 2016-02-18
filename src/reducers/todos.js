@@ -7,8 +7,17 @@ export default (state={notes: [{id: uuid.v4(), task: 'Code A Lot More!', editing
 				notes: [...state.notes, {id: uuid.v4(), task: action.todo, editing: true}]
 			};
 		case 'editTodo':
-			console.log('EDIT TODO');
-			return state;
+			return {
+				notes: state.notes.map(note => {
+					if(note.id !== action.id) {
+						return note;
+					}
+					return Object.assign({}, note, {
+						task: action.val,
+						editing: false
+					});
+				})
+			};
 		default:
 			return state
 	}

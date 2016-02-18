@@ -5,10 +5,10 @@ export function addTodo(todo) {
 	}
 }
 
-export function editTodo(index, val) {
+export function editTodo(id, val) {
 	return {
 		type: 'editTodo',
-		index,
+		id,
 		val
 	}
 }
