@@ -13,6 +13,13 @@ export function editTodo(id, val) {
 	}
 }
 
+export function setEdit(id) {
+	return {
+		type: 'setEdit',
+		id
+	}
+}
+
 export function deleteTodo(index) {
 	return {
 		type: 'deleteTodo',

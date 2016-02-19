@@ -18,6 +18,17 @@ export default (state={notes: [{id: uuid.v4(), task: 'Code A Lot More!', editing
 					});
 				})
 			};
+		case 'setEdit':
+			return {
+				notes: state.notes.map(note => {
+					if(note.id !== action.id) {
+						return note;
+					}
+					return Object.assign({}, note, {
+						editing: true
+					});
+				})
+			};
 		default:
 			return state
 	}
