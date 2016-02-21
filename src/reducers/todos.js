@@ -4,7 +4,7 @@ export default (state={notes: [{id: uuid.v4(), task: 'Code A Lot More!', editing
 	switch(action.type) {
 		case 'addTodo':
 			return {
-				notes: [...state.notes, {id: uuid.v4(), task: action.todo, editing: true}]
+				notes: [...state.notes, {id: uuid.v4(), task: action.todo, editing: false}]
 			};
 		case 'editTodo':
 			return {
