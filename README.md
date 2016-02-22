@@ -8,6 +8,7 @@ http://reactjsnews.com/your-first-redux-app/
 
 TODO: refactor using redux api docs
 - http://redux.js.org/docs/basics/ExampleTodoList.html
+  - reducers/visibilityFilter.js
 
 TODO: implement kanban from SurviveJS:
 - demo: http://survivejs.com/demos/08_building_kanban/

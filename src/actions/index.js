@@ -1,28 +1,51 @@
-export function addTodo(todo) {
+let nextTodo = 0;
+export const addTodo = (text) => {
 	return {
-		type: 'addTodo',
-		todo
+		type: 'ADD_TODO',
+		id: nextTodoId++,
+		text
 	}
 }
 
-export function editTodo(id, val) {
+export const setVisibilityFilter = (filter) => {
 	return {
-		type: 'editTodo',
-		id,
-		val
+		type: 'SET_VISIBILITY_FILTER',
+		filter
 	}
 }
 
-export function setEdit(id) {
+export const toggleTodo = (id) => {
 	return {
-		type: 'setEdit',
+		type: 'TOGGLE_TODO',
 		id
 	}
 }
 
-export function deleteTodo(index) {
-	return {
-		type: 'deleteTodo',
-		index
-	}
-}
+// export function addTodo(todo) {
+// 	return {
+// 		type: 'addTodo',
+// 		todo
+// 	}
+// }
+//
+// export function editTodo(id, val) {
+// 	return {
+// 		type: 'editTodo',
+// 		id,
+// 		val
+// 	}
+// }
+//
+// export function setEdit(id) {
+// 	return {
+// 		type: 'setEdit',
+// 		id
+// 	}
+// }
+//
+// export function deleteTodo(index) {
+// 	return {
+// 		type: 'deleteTodo',
+// 		index
+// 	}
+// }
