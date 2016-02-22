@@ -6,6 +6,9 @@ http://reactjsnews.com/your-first-redux-app/
 - work through egghead redux course: https://egghead.io/series/getting-started-with-redux
 
 
+TODO: refactor using redux api docs
+- http://redux.js.org/docs/basics/ExampleTodoList.html
+
 TODO: implement kanban from SurviveJS:
 - demo: http://survivejs.com/demos/08_building_kanban/
 - tut: http://survivejs.com/webpack_react/implementing_notes/
