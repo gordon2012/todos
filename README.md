@@ -8,6 +8,7 @@ DONE:
   - https://egghead.io/series/getting-started-with-redux  
 - refactor using redux api docs
   - http://redux.js.org/docs/basics/ExampleTodoList.html
+- re-implement DevTools
 
 TODO:
 - reincorporate previous work into new refactor
