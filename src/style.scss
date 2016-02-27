@@ -1,3 +1,14 @@
-.black-box {
-	border: 1px solid black;
+.todo-list {
+
+	@at-root {
+		ul#{&} {
+			list-style: none;
+			padding: 0;
+		}
+	}
+
+	li {
+		border: 1px solid black;
+		margin: 4px 0;
+	}
 }
