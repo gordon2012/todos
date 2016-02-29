@@ -21,6 +21,13 @@ export const toggleTodo = (id) => {
 	}
 }
 
+export const toggleEdit = (id) => {
+	return {
+		type: 'TOGGLE_EDIT',
+		id
+	}
+}
+
 // export function addTodo(todo) {
 // 	return {
 // 		type: 'addTodo',

@@ -9,7 +9,7 @@ TODO:
   - tut: http://survivejs.com/webpack_react/implementing_notes/
   - repo: https://github.com/survivejs/webpack_react
 - lower verbosity of webpack
-- edit todos
+- implement edit todo
 
 DONE:
 - begin setup hot reloading
@@ -22,5 +22,6 @@ DONE:
 - add button for toggle
 - install bootstrap
   - http://blog.theodybrothers.com/2015/07/how-to-use-bootstrap-css-only-and.html
+- add edit toggle
 
 DOING:
