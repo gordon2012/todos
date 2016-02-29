@@ -6,7 +6,7 @@ const Todo = ({ onClick, completed, text }) => (
 			textDecoration: completed ? 'line-through' : 'none'
 		}}
 	>
-		<button onClick={onClick}>Done</button> {text}
+		<button className="btn btn-primary" onClick={onClick}>Done</button> {text}
 	</li>
 );
 
