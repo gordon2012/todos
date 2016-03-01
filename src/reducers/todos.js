@@ -28,6 +28,15 @@ const todo = (state, action) => {
 				editing: action.val
 			});
 
+		case 'EDIT_TODO':
+			if(state.id !== action.id) {
+				return state;
+			}
+			return Object.assign({}, state, {
+				text: action.text
+			});
+
+
 		default:
 			return state;
 	}
@@ -45,6 +54,10 @@ const todos = (state = [], action) => {
 				todo(t, action)
 			);
 		case 'SET_EDITING':
+			return state.map(t =>
+				todo(t, action)
+			);
+		case 'EDIT_TODO':
 			return state.map(t =>
 				todo(t, action)
 			);

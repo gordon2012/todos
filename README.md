@@ -26,3 +26,5 @@ DONE:
 - change edit so only one entry is editing at one time
 
 DOING:
+- begin implementing edit functionality
+  - add EditTodo container

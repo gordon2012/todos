@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import { toggleTodo } from '../actions';
 import { setEditing } from '../actions';
+import { editTodo } from '../actions';
 import TodoList from '../components/TodoList'
 
 const getVisibleTodos = (todos, filter) => {
@@ -27,6 +28,9 @@ const mapDispatchToProps = (dispatch) => {
 		},
 		onEditClick: (id, val) => {
 			dispatch(setEditing(id, val))
+		},
+		onSave: (id, text) => {
+			dispatch(editTodo(id, text))
 		}
 	}
 };
