@@ -21,10 +21,11 @@ export const toggleTodo = (id) => {
 	}
 }
 
-export const toggleEdit = (id) => {
+export const setEditing = (id, val) => {
 	return {
-		type: 'TOGGLE_EDIT',
-		id
+		type: 'SET_EDITING',
+		id,
+		val
 	}
 }
 

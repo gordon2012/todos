@@ -23,5 +23,6 @@ DONE:
 - install bootstrap
   - http://blog.theodybrothers.com/2015/07/how-to-use-bootstrap-css-only-and.html
 - add edit toggle
+- change edit so only one entry is editing at one time
 
 DOING:

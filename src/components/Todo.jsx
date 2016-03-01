@@ -1,14 +1,17 @@
 import React, { PropTypes } from 'react';
 
 const Todo = ({ onClick, onEdit, completed, text, editing }) => (
-	<li
+	<li className="list-group-item"
 		style={{
 			textDecoration: completed ? 'line-through' : 'none'
 		}}
 	>
 		<button className="btn btn-primary" onClick={onClick}>Done</button>
 		<button className={editing ? "btn btn-success" : "btn btn-danger"} onClick={onEdit}>Edit</button>
-		{text}
+
+		<span style={{padding: '0 16px'}}>{text}</span>
+
+
 	</li>
 );
 

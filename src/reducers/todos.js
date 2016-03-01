@@ -16,12 +16,16 @@ const todo = (state, action) => {
 				completed: !state.completed
 			});
 
-		case 'TOGGLE_EDIT':
+		case 'SET_EDITING':
 			if(state.id !== action.id) {
-				return state;
+				if(action.val) {
+					return Object.assign({}, state, {
+						editing: false
+					});
+				}
 			}
 			return Object.assign({}, state, {
-				editing: !state.editing
+				editing: action.val
 			});
 
 		default:
@@ -40,7 +44,7 @@ const todos = (state = [], action) => {
 			return state.map(t =>
 				todo(t, action)
 			);
-		case 'TOGGLE_EDIT':
+		case 'SET_EDITING':
 			return state.map(t =>
 				todo(t, action)
 			);
